@@ -74,6 +74,11 @@ Kuvasta näkyy sovelluksen ulkoasu ja tehtävälistan toiminta.
  Tekoälyn käyttö: käytin Chatgpt:tä apuna javascriptin ymmärtämisesssä ja virheiden etsimisessä. Testasin sovellusta projektin aikana ja korjasin koodia vaihteittain.
 
 9. Linkit
-. Github-repositorio: https://github.com/osm177/Projekti_1_DOM_Skriptaus
-. Julkaistu sovellus: https://osm177.github.io/Projekti_1_DOM_Skriptaus/
-. esittelyvideo: tähän
+
+- Github-repositorio: https://github.com/osm177/Projekti_1_DOM_Skriptaus
+
+- Julkaistu sovellus: https://osm177.github.io/Projekti_1_DOM_Skriptaus/
+
+- Esittelyvideo: 
+
+
