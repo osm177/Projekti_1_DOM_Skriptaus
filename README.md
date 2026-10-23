@@ -50,8 +50,10 @@ Tehtävien yhteydessä näkyvät myös tehtävien valintaruudut ja poistopainikk
  - Nähdö tallennetut tehtävät, kun sivu avataan uudelleen
 
 
- 6. Kuvakaappaukset
+ 6. Kuvakaappaukset:
+
  Alla on kuvakaappaus valmiista sovelluksesta
+ 
 ![Valmis Todo list](Images/todo-list.png)
 
 
