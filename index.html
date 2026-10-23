@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <h1>Hello World</h1>
-</body>
+    <main class="todo-container">
+        <h1>My Todo List</h1>
+        <p>Organize your tasks and get things done!</p>
+
+        <form id="task-form">
+            <label for="task-input">New task</label>
+
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Enter a task.."
+                >
+                
+                <button type="submit">Add Task</button>
+            </div>
+            <p id="error-message" role="alert"></p>
+        </form>
+
+        <p id="task-counter">Tasks remaining: 0</p>
+
+        <ul id="task-list"></ul>
+    </main>
+
+    </body>
 </html>
