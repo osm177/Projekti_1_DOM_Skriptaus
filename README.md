@@ -49,9 +49,16 @@ Tehtävien yhteydessä näkyvät myös tehtävien valintaruudut ja poistopainikk
  - Tallentaa tehtävät selaimen muistiin
  - Nähdö tallennetut tehtävät, kun sivu avataan uudelleen
 
+
  6. Kuvakaappaukset
+ Alla on kuvakaappaus valmiista sovelluksesta
 ![Valmis Todo list](Images/todo-list.png)
+
+
+
 Kuvasta näkyy sovelluksen ulkoasu ja tehtävälistan toiminta.
+
+
 
 
  7. Mitä opin projektin aikana
