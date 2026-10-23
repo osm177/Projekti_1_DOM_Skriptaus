@@ -79,6 +79,6 @@ Kuvasta näkyy sovelluksen ulkoasu ja tehtävälistan toiminta.
 
 - Julkaistu sovellus: https://osm177.github.io/Projekti_1_DOM_Skriptaus/
 
-- Esittelyvideo: 
+- Esittelyvideo: https://youtu.be/OzNiZ7RsuSA
 
 
