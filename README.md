@@ -53,7 +53,7 @@ Tehtävien yhteydessä näkyvät myös tehtävien valintaruudut ja poistopainikk
  6. Kuvakaappaukset:
 
  Alla on kuvakaappaus valmiista sovelluksesta
- 
+
 ![Valmis Todo list](Images/todo-list.png)
 
 
@@ -75,5 +75,5 @@ Kuvasta näkyy sovelluksen ulkoasu ja tehtävälistan toiminta.
 
 9. Linkit
 . Github-repositorio: linkki tähän
-. Julkaistu sovellus: lisään github pages-linkkin tähän
+. Julkaistu sovellus: https://osm177.github.io/Projekti_1_DOM_Skriptaus/
 . esittelyvideo: tähän
