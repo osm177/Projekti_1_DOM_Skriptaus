@@ -11,9 +11,23 @@
 
 <p>Jalkapallon ottelutiedot</p>
 
-<h2>API-yhteyden testaus</h2>
+<h2>Ottelut</h2>
 
-<p id="tulos">Haetaan ottelutietoja...</p>
+<p id="tulos">Haetaan otteluita...</p>
+<div class="suodattimet">
+    <button class="suodatin aktiivinen" data-suodatin="kaikki">
+        Kaikki ottelut
+    </button>
+
+    <button class="suodatin" data-suodatin="kaynnissa">
+        Käynnissä
+    </button>
+
+    <button class="suodatin" data-suodatin="paattyneet">
+        Päättyneet
+    </button>
+
+</div>
 
 <div id="ottelut"></div>
 

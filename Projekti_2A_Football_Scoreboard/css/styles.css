@@ -1,0 +1,136 @@
+/* sivun yleiset asetukset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxy;
+}
+
+/* koko sivun ulkoasu */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101820;
+    color: #ffffff;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;   
+}
+
+body > p {
+    color: #aab4be;
+    margin-bottom: 30px;   
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color:#00d01f;
+}
+
+#tulos {
+    color:#aab4be;
+    margin-bottom: 20px;
+}
+
+#ottelut {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap:15px;
+}
+
+#ottelut > div {
+    background-color: #1c2935;
+    padding:20px;
+    border-radius:10px;
+    border: 1px solid #2c3b49;
+}
+
+#ottelut h3 {
+    font-size:17px;
+    margin-bottom:12px;
+    color:#ffffff;
+}
+
+#ottelut p {
+    color: #aab4be;
+    margin-bottom:8px;
+}
+
+#ottelut hr {
+    border:none;
+    border-top:1px solid #344452;
+    margin-top:12px;
+}
+/*yläpalkki*/
+.ottelu-ylapalkki {
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #aab4be;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.live-merkki {
+    color: #ff4d4d;
+    font-weight:bold;
+    font-size: 12px;
+}
+
+.joukkue img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.joukkue span {
+    flex: 1;
+    font-size: 15px;
+}
+
+.joukkue strong {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.ottelu-tilanne {
+    color: #00d084;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/*suodattimet*/
+.suodattimet {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.suodatin {
+    background-color: #1c2935;
+    color: #aab4be;
+    border: 1px solid #344452;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.suodatin:hover {
+    border-color: #00d084;
+    color: #ffffff;
+}
+
+.suodatin.aktiivinen {
+    background-color: #00d084;
+    color: #020305;
+    border-color: #00d084;
+    font-weight: bold;
+}
