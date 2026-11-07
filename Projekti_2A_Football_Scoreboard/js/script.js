@@ -4,7 +4,7 @@ const apiOsoite = "https://v3.football.api-sports.io/fixtures?live=all";
     let aktiivinenSuodatin = "kaikki";
 
 // Oma henkilökohtainen API-avain
-const apiAvain = "639e23290b1749e1c71f785868145c55";
+const apiAvain = "";
 // Lähetetään pyyntö API-palvelimelle
 fetch(apiOsoite, {
     method: "GET",
