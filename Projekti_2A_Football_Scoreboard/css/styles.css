@@ -40,7 +40,7 @@ h2 {
 #ottelut {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
-    gap:15px;
+    gap:18px;
 }
 
 #ottelut > div {
@@ -120,7 +120,7 @@ h2 {
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
-    transition: 0.2s;
+    
 }
 
 .suodatin:hover {
@@ -133,4 +133,30 @@ h2 {
     color: #020305;
     border-color: #00d084;
     font-weight: bold;
+}
+
+/* hae uudet ottelut painikke */
+
+#haeOttelut {
+    background-color: #1c2935;
+    color: #aeb8c2;
+    border: 2px, solid #344554;
+    border-radius: 10px;
+    padding: 14px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: none;
+    box-sizing: border-box;
+    
+}
+
+#haeOttelut:hover {
+    background-color: #1c2935;
+    color: #aeb8c2;
+    border-color: #00c987;
+    
+}
+
+button {
+    transition: none;
 }

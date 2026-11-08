@@ -1,0 +1,4 @@
+[build]
+  base = "Projekti_2A_Football_Scoreboard"
+  publish = "."
+  functions = "netlify/functions"

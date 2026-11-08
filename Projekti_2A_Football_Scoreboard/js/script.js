@@ -1,53 +1,57 @@
-// API-osoite, josta haetaan käynnissä olevat ottelut
-const apiOsoite = "https://v3.football.api-sports.io/fixtures?live=all";
+
+
     let kaikkiOttelut = [];
     let aktiivinenSuodatin = "kaikki";
 
-// Oma henkilökohtainen API-avain
-const apiAvain = "";
-// Lähetetään pyyntö API-palvelimelle
-fetch(apiOsoite, {
-    method: "GET",
-    headers: {
-        "x-apisports-key": apiAvain
-    }
-})
-// Muutetaan palvelimen vastaus JSON-muotoon
-.then(vastaus => {
+
+function haeOttelut() {
+
+    //haetaan ottelut Netlify funktion kautta
+    fetch("/.netlify/functions/ottelut")
+
+
+    // Muutetaan palvelimen vastaus JSON-muotoon
+    .then(vastaus => {
     if (!vastaus.ok) {
         throw new Error("API-pyyntö epäonnistui: " + vastaus.status);
     }
     return vastaus.json();
-})
-// Käsitellään ja näytetään API:n palauttamat tiedot
-.then(data => {
+    })
+    // Käsitellään ja näytetään API:n palauttamat tiedot
+    .then(data => {
     console.log("Yhteys API-palveluun onnistui!");
-    
-    // Tähän tallennan haetut ottelut muuttujaan
-    const ottelut = data.response;
-    console.log("API:N koko vastaus:", data);
+
     console.log("API-ERRORS:", data.errors);
     console.log("API-RESULTS:", data.results);
     console.log("API-RESPONSE:", data.response);
-    kaikkiOttelut = ottelut;
-   
 
-    // Päivitetään sivun ilmoitus
-    document.getElementById("tulos").textContent =
-    "Otteluita löytyi: " + ottelut.length;
-    suodataOttelut();
-   
-})
-
+    kaikkiOttelut = data.response;
     
+    // Tallennetaan viimeisin päivitysaika
+    document.getElementById("paivitysAika").textContent = 
+        "Viimeksi päivitetty: " + new Date().toLocaleTimeString("fi-FI");
 
-// Käsitellään mahdolliset virheet
+    suodataOttelut();
+
+})
+// käsitellään virheitä
 .catch(virhe => {
     console.error("Tapahtui virhe:", virhe);
+
     document.getElementById("tulos").textContent =
         "Otteluiden hakeminen epäonnistui. " + virhe.message;
+}); 
 
-});
+}
+
+// hakee ottelut sivun avautuessa
+haeOttelut();
+
+// päivittää 15min välein ettei API:n raja vastaan.
+setInterval(haeOttelut, 15 * 60 * 1000);
+ 
+   
+  
 
 function naytaOttelut(ottelut) {
 
@@ -75,9 +79,10 @@ function naytaOttelut(ottelut) {
         const peliaika = ottelu.fixture.status.elapsed;
         const liiga = ottelu.league.name;
 
-        const onKaynnissa = ottelu.fixture.status.short ==="1H" ||
-            ottelu.fixture.status.short ==="2H" ||
-            ottelu.fixture.status.short === "HT";
+        const onKaynnissa = ["1H", "HT", "2H", "ET", "BT", "P"].includes(
+            ottelu.fixture.status.short
+        );
+        
 
 
         const otteluKortti = document.createElement("div");
@@ -157,4 +162,19 @@ suodatinPainikkeet.forEach(painike => {
 
 
     });
+});
+
+//const haePainike = document.getElementById("haeOttelut");
+
+//haePainike.addEventListener("click", () => {
+   // haeOttelut();
+//});
+const haePainike = document.getElementById("haeOttelut");
+
+haePainike.addEventListener("click", () => {
+    console.log("Hae uudet ottelut -painiketta painettiin!");
+
+    document.getElementById("tulos").textContent = "Haetaan uusia otteluita...";
+
+    haeOttelut();
 });
