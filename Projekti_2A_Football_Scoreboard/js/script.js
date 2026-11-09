@@ -164,11 +164,6 @@ suodatinPainikkeet.forEach(painike => {
     });
 });
 
-//const haePainike = document.getElementById("haeOttelut");
-
-//haePainike.addEventListener("click", () => {
-   // haeOttelut();
-//});
 const haePainike = document.getElementById("haeOttelut");
 
 haePainike.addEventListener("click", () => {
