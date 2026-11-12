@@ -74,3 +74,11 @@ https://youtu.be/Wwsv4p7y02c
 - API-Football: https://www.api-football.com/
 - Netlify Documentation: https://docs.netlify.com
 - MDN Web Docs: https://developer.mozilla.org/
+
+
+Tekoälun käyttö
+
+Projektin tekemisessä käytin apuna chatGPT:tä.
+Hyödynsin sitä JavaScriptin ymmärtämisessä, ongelmien ratkaisemisessa ja virheiden korjaamisessa.
+
+Käytin sitä tukena projektin eri vaiheissa, mutta testasin sovelluksen toimintaa itse ja tein lopulliset muutokset omaan projektiini.
